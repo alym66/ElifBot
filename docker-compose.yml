@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+
+  bot:
+    user: "root"
+    build:
+      context: ./elifbot
+      dockerfile: Dockerfile
+    command: >
+     sh -c "python bot.py"
+    ports:
+      - "80:8000"
